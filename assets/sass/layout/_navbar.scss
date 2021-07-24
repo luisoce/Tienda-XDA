@@ -1,0 +1,167 @@
+.nav {
+    display: flex;
+    width: 100%;
+
+    // SECCION LOGO
+    .nav__logo {
+        // width: 30%;
+        background-color: $cs-smoky-black;
+        display: inline-flex;
+        justify-content: space-around;
+        
+        // MODO CELULAR
+        @include phone-view {
+            width: 3rem;
+            height: 3rem;
+            h2 {
+                padding-top: .75rem;
+                color: $cs-white;
+                font-family: $tp-raleway;
+                font-size: $fs-large;
+            }
+        }
+
+        // MODO TABLET
+        @include tablet-view {
+            width: 5rem;
+            height: 5rem;
+            h2 {
+                padding-top: 1.4rem;
+                color: $cs-white;
+                font-family: $tp-raleway;
+                font-size: $fs-xx-large;
+            }
+        }
+
+        // MODO NOTEBOOK Y SUPERIOR
+        @include laptop-view {
+            width: 5rem;
+            height: 5rem;
+            h2 {
+                color: $cs-white;
+                font-family: $tp-raleway;
+                font-size: $fs-xx-large;
+            }
+        }
+    }
+    // FIN SECCION LOGO
+
+    @include phone-view {
+        // MENU NAVBAR
+        .nav__menu {
+            width: 90%;
+            position: absolute;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: .55rem;
+            ul{
+                display: none;
+            }
+            input:checked  ~ ul {
+                display:block;
+            }
+            input {
+                display: none;
+            }
+            label {
+                box-sizing: border-box;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 2rem;
+                height: 2rem;
+                line-height: 30px;
+                font-weight: bold;
+                text-align: center;
+                user-select: none;
+            }
+            /* Estilo del boton cuando se pasa el mouse por encima*/
+            label:hover{
+                background: rgb(233, 231, 231);
+            }
+            /* Estilo del boton cuando el menú está expandido*/
+            input:checked ~ label {
+                background: lightgrey; 
+            }
+            ul{
+                // margin-top:48px;
+                padding: 0;
+                // width: 200px;
+            }
+            li {
+                display: block;
+                background: #f1e6e6;;
+                margin: 0;
+                padding: 10px;
+                list-style: none;
+                border-bottom: 1px solid grey;
+            }
+            /*Estilo cuando el mouse pasa encima de cada link del menu*/
+            li:hover {
+                filter: brightness(110%);
+            }
+        }
+    }
+
+    @include tablet-view {
+        // MENU NAVBAR
+        .nav__menu {
+            width: 90%;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        input {
+            display: none;
+        }
+        i {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 2rem;
+            li {
+                padding-right: 1rem;
+                // padding: 1rem;
+                display: inline-flex;
+                font-family: $tp-old-standard-tt;
+                font-weight: $bold;
+                font-size: $fs-x-large;
+            }
+        }
+    }
+
+    @include laptop-view {
+        // MENU NAVBAR
+        .nav__menu {
+            width: 90%;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        input {
+            display: none;
+        }
+        i {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 2rem;
+            li {
+                padding-right: 1rem;
+                // padding: 1rem;
+                display: inline-flex;
+                font-family: $tp-old-standard-tt;
+                font-weight: $bold;
+                font-size: $fs-x-large;
+            }
+        }
+    }
+}

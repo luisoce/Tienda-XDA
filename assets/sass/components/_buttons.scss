@@ -1,0 +1,24 @@
+// BUTTONS
+.section__button {
+    .button {
+        background-color: $cs-white;
+        border: 2px solid $cs-quick-silver;
+        padding: .5rem 2rem .5rem 2rem;
+        font-family: $tp-raleway;
+        font-weight: $bold;
+        font-size: $fs-medium;
+        font-size: $fs-medium;
+        &:hover {
+            border: 2px solid $cs-granite-gray;
+        }
+    }
+    @include phone-view {
+        margin-left: 3rem;
+        // padding-right: 2rem;
+    }
+    @include tablet-view {
+        margin-left: 5rem;
+        // padding-right: 3rem;
+    }
+
+}

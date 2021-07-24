@@ -1,0 +1,80 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+    @include phone-view {
+        display: inline-block;
+        width: 100%;
+        .section__contenido {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: .7rem;
+            h1 {
+                font-family: $tp-old-standard-tt;
+                text-transform: uppercase;
+                font-weight: $bold;
+                font-size: $fs-xx-large;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            p {
+                font-family: $tp-raleway;
+                font-size: $fs-medium;
+                color: $cs-quick-silver;
+                line-height:1.7rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+
+    @include tablet-view {
+        width: 100%;
+        .section__contenido {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: .7rem;
+
+        h1 {
+            font-family: $tp-old-standard-tt;
+            text-transform: uppercase;
+            font-weight: $bold;
+            font-size: $fs-xx-large;
+            padding-left: 5rem;
+            padding-right: 3rem;
+        }
+        p {
+            font-family: $tp-raleway;
+            font-size: $fs-medium;
+            color: $cs-quick-silver;
+            line-height:1.7rem;
+            padding-left: 5rem;
+            padding-right: 15rem;
+        }
+    }
+    }
+
+    @include laptop-view {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        .section__contenido {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: .7rem;
+            h1 {
+                font-family: $tp-old-standard-tt;
+                text-transform: uppercase;
+                font-weight: $bold;
+                font-size: $fs-xxx-large;
+            }
+            p {
+                font-family: $tp-raleway;
+                font-size: $fs-medium;
+                color: $cs-quick-silver;
+                line-height:1.7rem;
+                padding-right: 13rem;
+            }
+        }
+    }
+}
